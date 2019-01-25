@@ -33,9 +33,9 @@ public class HomeController {
         aux.setRestaurants(data);
         //lets save
         DataFileHelper helper = new DataFileHelper();
-        helper.saveLinceProjectToFile(helper.getLinceProjectFilePath(), aux);
+        helper.saveProjectToFile(helper.getProjectFilePath(), aux);
         //lets load
-        DataWrapper aux2 = helper.loadLinceProjectFromFile(helper.getLinceProjectFilePath());
+        DataWrapper aux2 = helper.loadProjectFromFile(helper.getProjectFilePath());
 
         model.addAttribute("restaurantes", data);
         return "index";

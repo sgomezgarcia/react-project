@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<myProject>
+    <restaurants>
+        <restaurant>
+            <name>Pepito0</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito1</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito2</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito3</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito4</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito5</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito6</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito7</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito8</name>
+        </restaurant>
+        <restaurant>
+            <name>Pepito9</name>
+        </restaurant>
+    </restaurants>
+</myProject>

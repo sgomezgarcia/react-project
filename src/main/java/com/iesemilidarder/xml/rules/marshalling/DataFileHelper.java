@@ -33,9 +33,9 @@ public class DataFileHelper {
      *
      * @return lastSavedFile
      */
-    public File getLinceProjectFilePath() {
+    public File getProjectFilePath() {
         Preferences prefs = Preferences.userNodeForPackage(SpringBootWebApplication.class);
-        String filePath = prefs.get(PREFERENCES_FILE_PATH, null);
+        String filePath = prefs.get(PREFERENCES_FILE_PATH, "./projectData.xml");
         if (filePath != null) {
             return new File(filePath);
         } else {
@@ -64,7 +64,7 @@ public class DataFileHelper {
      *
      * @param file XML File with data
      */
-    public DataWrapper loadLinceProjectFromFile(File file) {
+    public DataWrapper loadProjectFromFile(File file) {
         try {
             JAXBContext context = getXMLContext();
             Unmarshaller um = context.createUnmarshaller();
@@ -88,7 +88,7 @@ public class DataFileHelper {
      *
      * @param file XML File to save data
      */
-    public void saveLinceProjectToFile(File file, DataWrapper data) {
+    public void saveProjectToFile(File file, DataWrapper data) {
         try {
             JAXBContext context = getXMLContext();
             Marshaller m = context.createMarshaller();
