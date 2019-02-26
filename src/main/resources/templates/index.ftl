@@ -29,7 +29,7 @@ Spring rocks the web. YEHA
         <#list restaurantes as item>
             <li>
                 <div>
-                    <label for="fo-range">${item.name!""}</label>
+                    <label for="fo-range-${item.name!""}">${item.name!""}</label>
                     <input id="fo-range-${item.name!""}" type="range" name="rangeInput" min="1" max="20"
                            onchange="updateTextInput('fo-value-${item.name!""}',this.value);">
                     <input id="fo-value-${item.name!""}" type="text" value=""/>

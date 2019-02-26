@@ -6,6 +6,7 @@ package com.iesemilidarder.xml.rules.data;
  * By berto. 12/02/2018
  */
 public class Restaurant {
+    private Integer id;
     private String name;
     private String address;
     private String web;
@@ -13,6 +14,13 @@ public class Restaurant {
     private String description;
     private String image;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

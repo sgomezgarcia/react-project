@@ -17,10 +17,16 @@ import java.util.List;
  */
 @Controller
 public class HomeController {
+    public static List<Restaurant> myData = new ArrayList<>();
+
+    @RequestMapping("/@restaurantId/@value")
+    public String doSave(Model model){
+        return "";
+    }
+
     @RequestMapping("/")
     public String index(Model model) {
-     /*   ReadDB rd = new ReadDB();
-        List<Restaurantes> data = rd.readRestaurantes("");*/
+
         List<Restaurant> data = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             Restaurant aux = new Restaurant();
