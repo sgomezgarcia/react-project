@@ -1,3 +1,1 @@
-var yuhu = function (txt) {
-    console.log("yuhu:" + txt);
-};
+console.log("hiThere");

@@ -13,7 +13,7 @@ var commonFunctions = {
     },
     askMeBiconditional: function () {
         // a? b:c;
-        confirm("¿Me bicondicionas??") ? alert("yuhu") : alert("no yuhu");
+        confirm("¿Me bicondicionas??") ? alert("doLog") : alert("no doLog");
     },
     showMessage: function () {
         var msg = document.getElementById("messageAlert");
