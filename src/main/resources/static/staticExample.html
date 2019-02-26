@@ -14,7 +14,9 @@
 <body class="container">
 <div class="row">
     <h1 class="col-md-6">Hello, world!</h1>
-    <div class="col-md-6 alert alert-primary" role="alert">
+    <input id="foName" type="text" name="name" value="Pepito">
+    <div id="messageAlert" class="col-md-6 alert alert-primary"
+         role="alert" style="display: none;">
         This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
     </div>
 </div>
@@ -22,6 +24,9 @@
 
 <input type="button" onclick="commonFunctions.askMeSomething()" value="Boton 1">
 <button value="yuhu" onclick="commonFunctions.helloWorld();">Boton 2</button>
+<button value="yuhu" onclick="commonFunctions.showMessage();">Show message</button>
+<button value="yuhu" onclick="commonFunctions.blockMe();">Block Me</button>
+<button value="yuhu" onclick="commonFunctions.alertInput('foName');">Show input</button>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -33,6 +38,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
         integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
         crossorigin="anonymous"></script>
-<script src="./js/myFirstJS.js"></script>
+<script src="/js/myFirstJS.js"></script>
 </body>
 </html>
