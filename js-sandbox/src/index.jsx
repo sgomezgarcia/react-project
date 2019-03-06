@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BootstrapTable from 'bootstrap-react-table';
 import { Button, Table } from 'reactstrap';
 
 
@@ -12,6 +11,11 @@ let myComplexData = [
     {name: "Sara2", surname: "gomez2"},
     {name: "Sara3", surname: "gomez3"}
 ];
+
+function alertAction(mensaje) {
+    alert(mensaje);
+};
+
 const columns = [
     {
         id: 'position',
@@ -60,9 +64,32 @@ ReactDOM.render(
             )}
             </tbody>
             <div>
-                <BootstrapTable
-                    columns={columns}
-                    data={data}/>
+                <Table>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Sara</td>
+                        <td>Gomez</td>
+                        <td>
+                            <Button
+                                color={"info"}
+                                onClick={
+                                    ()=>{alertAction("ok?")}
+                                }>
+                                @sgg
+                            </Button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </Table>
             </div>
         </table>
     </div>
