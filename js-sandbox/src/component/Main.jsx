@@ -3,6 +3,9 @@ import Header from './Header';
 import SideBar from "./SideBar";
 import Article from "./Article";
 import { Container, Row } from 'reactstrap';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCaretRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+library.add(faCaretRight, faCaretDown )
 
 const myMenu = [
     {label:"Home",link: "/"},
@@ -36,7 +39,7 @@ export default class Main extends Component {
 
         this.changeArticle = this.changeArticle.bind(this);
     }
-
+    // funcion con un parametro "number" que se asignará en el estado "articleshow"
     changeArticle(number){
         this.setState({articleshow: number})
     }
