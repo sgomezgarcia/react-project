@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Table } from 'reactstrap';
+import MyTableComponent from './component/MyTableComponent';
+import NewTableComponent from "./component/NewTableComponent";
 
 
 const title = "Hello";
@@ -14,7 +16,7 @@ let myComplexData = [
 
 function alertAction(mensaje) {
     alert(mensaje);
-};
+}
 
 const columns = [
     {
@@ -41,7 +43,8 @@ const data = [
 ];
 ReactDOM.render(
     <div className="container">
-        <h1>{title}</h1>,
+        <h1>{title}</h1>
+        <MyTableComponent/>
         <ul>
             <li>yuhu</li>
             {myData.map((v) =>
@@ -92,6 +95,11 @@ ReactDOM.render(
                 </Table>
             </div>
         </table>
+
+        <NewTableComponent
+        prueba={"estoesunaprueba"}
+        buttonLabel={"show table"}
+        />
     </div>
 
     , document.getElementById('app')
