@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Col, Button, Collapse } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from "prop-types";
 
 
 
@@ -12,14 +13,18 @@ export default class SideBar extends Component {
     }
 
     toggle() {
-        this.setState(state => ({ collapse: !state.collapse }));
+        this.setState({ collapse: !this.state.collapse });
     }
     render() {
         const { buttons, changeArticle } =  this.props;
+        const isCollapsed = this.state.collapse;
+        const classIcon = isCollapsed?"caret-down":"caret-right";
         return (
             <Col xs="3" style={{padding: "0px"}}>
                 <div style={{background: "#ffcccc", height: "100%", textAlign: 'center'}}>
-                    <Button color="info" onClick={this.toggle} style={{ margin: '10px', marginTop: "70px" }}>Blogs
+                    <Button color="info" onClick={this.toggle} style={{ margin: '10px', marginTop: "70px" }}>
+                        Blogs&#160;<FontAwesomeIcon icon={classIcon} />
+{/*
 
 
                         {
@@ -35,15 +40,14 @@ export default class SideBar extends Component {
                             </>
                         }
 
-
+*/}
                     </Button>
                     <Collapse isOpen={this.state.collapse}>
                         {
                             buttons.map ((button) => {
-                                    let id = button.id;
                                     return(
                                         <div style={{padding: "20px", textAlign: "center"}}>
-                                            <Button onClick={() => changeArticle(id)} color="info">{button.title}</Button>
+                                            <Button onClick={() => changeArticle(button.id)} color="info">{button.title}</Button>
                                         </div>
                                     )
                                 }
@@ -58,3 +62,12 @@ export default class SideBar extends Component {
 
     }
 }
+
+SideBar.propTypes = {
+    buttons: PropTypes.array.isRequired,
+    changeArticle: PropTypes.func.isRequired
+};
+
+SideBar.defaultProps = {
+    buttons: []
+};

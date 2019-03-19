@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Col } from 'reactstrap';
+import PropTypes from "prop-types";
 
 export default class Article extends Component {
     render() {
@@ -24,3 +25,12 @@ export default class Article extends Component {
 
     }
 }
+
+Article.propTypes = {
+    articles: PropTypes.array.isRequired,
+    articleshow: PropTypes.array.isRequired
+};
+
+Article.defaultProps = {
+    articles: []
+};

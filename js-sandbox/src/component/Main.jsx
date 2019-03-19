@@ -35,7 +35,7 @@ export default class Main extends Component {
         super(props);
         this.state = {
             articleshow: 0
-        }
+        };
 
         this.changeArticle = this.changeArticle.bind(this);
     }
@@ -47,7 +47,6 @@ export default class Main extends Component {
     render() {
         return(
             <>
-
                 <Header
                     links={myMenu}
                 />
